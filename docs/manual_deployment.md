@@ -24,18 +24,25 @@ This requires two distinct steps: setting up the environment and dependencies, a
 4. Add the work folder to your gopath:
 ```export GOPATH=$GOPATH:$(pwd)/cache/go```
 
+## Set up Precaution
+
+1. Install Node JS and NPM
+2. Install Precaution's dependencies by calling ```npm install``` from within the Precaution checkout
+
 ## Register the app
 
 Please refer to the [GitHub app documentation](https://developer.github.com/apps/building-your-first-github-app/#one-time-setup) to get started on registering your own running instance of the app.
 
+Set a temporary fake URL for "Webhook URL", we'll update it in the "Redirect GitHub webhooks to your local machine" section below.
+
 This app requires the following **GitHub permissions** :
 * Checks: **Read** and **Write**
-* Pull requests: **Read**
-* Code: **Read**
+* Pull requests: **Read-only**
+* Repository contents: **Read-only**
 
-Additionnally the app should subscribe to the **Pull requests** event.
+Additionally the app should subscribe to the **Pull requests** event.
 
-## Redirect Github webhooks to your local machine
+## Redirect GitHub webhooks to your local machine
 
 This can be useful when you are doing development work on Precaution itself and need a simple solution to trace the webhooks sent by GitHub and receive them without exposing your app to the internet.
 
@@ -45,3 +52,7 @@ to direct GitHub webhooks to your local machine.
 ## Testing
 
 Run ```npm test``` or ```yarn test```. This does not require any GitHub interaction (no need to register an instance of the app).
+
+## Running
+
+Run ```npm start``` to run a local instance of Precaution.
