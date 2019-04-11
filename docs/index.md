@@ -14,14 +14,17 @@ Precaution currently supports analysis of:
 * JavaScript and TypeScript via [TSLint](https://github.com/palantir/tslint) and [tslint-config-security](https://github.com/webschik/tslint-config-security)
 * Python files via [Bandit](https://github.com/PyCQA/bandit)
 
-## Using Precaution
+## Using the Precaution GitHub App
 
-- [Initial setup](initial_setup.md)
-- [False positives and how to handle them](false_positivies.md)
+- [Initial setup for your repository](initial_setup.md)
+- [Marking code to ignore with exclusions](false_positivies.md)
+
+## Deploying your own instance of Precaution
+
+- [Setting up a manual deployment](manual_deployment.md)
 
 ## Developing Precaution
 
-- [Setting up a manual deployment](manual_deployment.md)
 - [Debugging with VSCode](local_development.md)
 - [Architecture](architecture.md)
 
