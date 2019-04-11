@@ -12,6 +12,10 @@ const { runLinters } = require('./runner')
 module.exports = app => {
   app.log('Starting app')
 
+  // vuln
+  const foo = "alert('hello')";
+  eval(foo);
+
   app.on('check_suite', async context => {
     const action = context.payload.action
     const checkSuite = context.payload.check_suite
